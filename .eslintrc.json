@@ -41,6 +41,7 @@
           "ts": "never",
           "tsx": "never"
           }
-      ]
+      ],
+      "@typescript-eslint/no-var-requires": "warn"
   }
   }

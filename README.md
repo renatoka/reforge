@@ -1,51 +1,54 @@
-Deciding which workspace information to collect
-
-Collecting workspace information
-
-Filtering to most relevant information
-
 # Reforge
 
-Reforge is a boilerplate project that combines Vite, React, TypeScript, TailwindCSS, Electron Forge, Prisma, and SQLite to provide a robust starting point for building Electron applications.
+Reforge is a simple boilerplate for creating desktop applications that combines React, Vite, and Electron + Electron Forge. With some additionals like TypeScript, TailwindCSS, Prisma, Prettier, Husky, and Lint-Staged. To make this a standalone application, you can use preconfigured PrismaORM to work with SQLite database or you can change it to any other database you want (soon).
 
-## Project Structure
+![home](image.png)
 
-The project is structured as follows:
+## Features
 
-- `src/`: This is where the source code of the application resides.
-- `app.tsx`: This is the main React component of the application.
-- `backend/`: This directory contains the backend code.
-- `frontend/`: This directory contains the frontend code.
-- `main.ts`: This is the entry point for the Electron main process.
-- `preload.ts`: This script is loaded before the renderer process is loaded.
-- `prisma.ts`: This file sets up the Prisma client for database operations.
-- `renderer.ts`: This is the entry point for the Electron renderer process.
-- `prisma/`: This directory contains the Prisma schema and migrations.
+- **React** - A JavaScript library for building user interfaces.
+- **Vite** - A build tool that aims to provide a faster and leaner development experience for modern web projects.
+- **Electron** - A framework for creating native applications with web technologies like JavaScript, HTML, and CSS.
+- **Electron Forge** - A complete tool for creating, publishing, and installing modern Electron applications.
+- **TypeScript** - A strict syntactical superset of JavaScript that adds optional static typing.
+- **TailwindCSS** - A utility-first CSS framework for rapidly building custom designs.
+- **Prisma** - A modern database access toolkit designed specifically for TypeScript and Node.js.
+- **Prettier** - An opinionated code formatter that enforces a consistent code style.
+- **Husky** - A tool that makes it easy to use githooks as if they are npm scripts.
+- **Lint-Staged** - A tool that runs linters on git staged files.
+- **SQLite** - A C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine.
 
 ## Getting Started
 
-1. Clone the repository.
-2. Install the dependencies by running `npm install`.
-3. Start the development server by running `npm run start`.
+1. Clone the repository:
 
-## Building the Project
+```bash
+git clone https://github.com/renatoka/reforge.git
+```
 
-To build the project, run `npm run make`. This will create a distributable package of the application.
+2. Install the dependencies:
 
-## Linting and Formatting
+```bash
+cd reforge
+npm install
+```
 
-The project uses ESLint for linting and Prettier for code formatting. You can run the linter by executing `npm run lint` and format the code by running `npm run pretty`.
+3. Run the application:
 
-## Testing
-
-The project is currently not set up with a testing framework. You can add your preferred testing framework like Jest or Mocha.
-
-## Contributing
-
-Contributions are welcome. Please make sure to run the linter and formatter before committing your changes.
+```bash
+npm run start
+```
 
 ## License
 
-The project is licensed under the MIT license.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Please note that this is a basic guide and you might need to adjust it according to your project's specific needs.
+```
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Authors
+
+- **renatoka** - [renatoka](https://github.com/renatoka)
+```
