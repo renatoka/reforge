@@ -1,0 +1,8 @@
+build
+dist
+.vite
+
+*.html
+
+.gitignore
+.prettierignore
