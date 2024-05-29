@@ -1,12 +1,12 @@
 export {};
-import { type Channels } from './backend/ChannelRegister';
+import { type Channels } from '../backend/ChannelRegister';
 
 declare global {
   interface Window {
     electronAPI: {
       apiRequest: ({
         channel,
-        data
+        data,
       }: {
         channel: keyof Channels;
         data?: any;

@@ -4,6 +4,6 @@ import { contextBridge, ipcRenderer } from 'electron';
 
 contextBridge.exposeInMainWorld('electronAPI', {
   apiRequest: (channel: string, data: any) => {
-    return ipcRenderer.invoke('api:request', { channel, data });
-  }
+    return ipcRenderer.invoke('api:request', channel, data);
+  },
 });

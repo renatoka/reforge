@@ -3,6 +3,7 @@ import * as fs from 'fs';
 import path from 'path';
 import { open } from 'sqlite';
 import ChannelRegister from './backend/ChannelRegister';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const sqlite3 = require('sqlite3').verbose();
 
 /* We are placing database into user's home directory.
