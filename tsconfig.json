@@ -14,13 +14,8 @@
     "jsx": "react",
     "strict": true,
     "paths": {
-      "*": ["node_modules/*"],
-      "@components/*": ["./src/frontend/components/*"],
-      "@helpers/*": ["./src/frontend/helpers/*"],
-      "@hooks/*": ["./src/frontend/hooks/*"],
-      "@layouts/*": ["./src/frontend/layouts/*"],
-      "@pages/*": ["./src/frontend/pages/*"],
-      "@styles/*": ["./src/frontend/styles/*"],
+      "src/frontend/*": ["./src/frontend/*"],
+      "src/backend/*": ["./src/backend/*"]
     }
   },
 }
