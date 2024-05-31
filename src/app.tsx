@@ -1,37 +1,25 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
+import Intro from 'src/frontend/pages/Intro/Intro';
+import NotFound from 'src/frontend/pages/NotFound/NotFound';
 
-const root = ReactDOM.createRoot(document.getElementById('root')!);
-function App() {
-  useEffect(() => {
-    (async () => {
-      const response = await window.api.request({
-        channel: 'backendExample',
-        data: { message: 'Hello from frontend!' },
-      });
-      if (response.resolved) {
-        console.log(response.data[0]);
-        console.log('This data was fetched from backend by using IPC! 🚀');
-      } else {
-        console.error(response.error);
-      }
-    })();
-  }, []);
+const router = createHashRouter([
+  {
+    path: '/',
+    element: <Intro />,
+  },
+  {
+    path: '*',
+    element: <NotFound />,
+  },
+]);
 
-  return (
-    <div className="flex h-screen w-screen items-center justify-center bg-gray-900">
-      <div className="flex flex-col items-center gap-3 text-white">
-        <h1 className="text-3xl font-bold">Welcome to Reforge 🚀</h1>
-        <div className="flex flex-col items-center justify-center gap-2 text-center">
-          <p>Vite + React + TypeScript + TailwindCSS + Electron Forge + Prisma + SQLite</p>
-          <p>
-            Make sure to read <span className="underline">README.md</span> file to get started.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-root.render(<App />);
-export default App;
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <RouterProvider
+      router={router}
+      future={{ v7_startTransition: true }}
+    />
+  </React.StrictMode>,
+);

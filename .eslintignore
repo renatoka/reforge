@@ -1,4 +1,12 @@
-/node_modules/*
-dist/*
-build/*
-.vite/*
+build
+dist
+.vite
+.husky
+node_modules
+.vite
+
+*.html
+
+.gitignore
+.prettierignore
+.env-example
