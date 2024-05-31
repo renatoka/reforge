@@ -2,6 +2,8 @@ build
 dist
 .vite
 .husky
+node_modules
+.vite
 
 *.html
 

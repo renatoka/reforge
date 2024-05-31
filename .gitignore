@@ -94,3 +94,6 @@ out/
 # Database
 *.db
 *.db-journal
+
+# SWC
+.swc/
