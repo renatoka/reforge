@@ -1,8 +1,10 @@
 build
 dist
 .vite
+.husky
 
 *.html
 
 .gitignore
 .prettierignore
+.env-example

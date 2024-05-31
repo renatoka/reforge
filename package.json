@@ -2,7 +2,7 @@
   "name": "reforge",
   "productName": "reforge",
   "version": "1.0.0",
-  "description": "React + Vite + Electron + Prisma + + SQLite + TailwindCSS",
+  "description": "Reforge: a fullstack boilerplate for creating desktop applications with React and SQLite + PrismaORM. With some additionals like Vite, TypeScript, TailwindCSS, Prettier and more... 🚀",
   "main": ".vite/build/main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -52,10 +52,9 @@
     "typescript": "~4.5.4",
     "vite": "4.5.3"
   },
-  "keywords": [],
+  "keywords": ["reforge", "electron", "react", "sqlite", "prisma", "vite", "typescript", "tailwindcss", "prettier", "eslint", "husky", "commitlint", "lint-staged", "postcss", "autoprefixer", "electron-forge"],
   "author": {
-    "name": "renatoka",
-    "email": "rkauri1@vvg.hr"
+    "name": "renatoka"
   },
   "license": "MIT",
   "dependencies": {

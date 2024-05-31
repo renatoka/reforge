@@ -12,6 +12,15 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "jsx": "react",
-    "strict": true
-  }
+    "strict": true,
+    "paths": {
+      "*": ["node_modules/*"],
+      "@components/*": ["./src/frontend/components/*"],
+      "@helpers/*": ["./src/frontend/helpers/*"],
+      "@hooks/*": ["./src/frontend/hooks/*"],
+      "@layouts/*": ["./src/frontend/layouts/*"],
+      "@pages/*": ["./src/frontend/pages/*"],
+      "@styles/*": ["./src/frontend/styles/*"],
+    }
+  },
 }
