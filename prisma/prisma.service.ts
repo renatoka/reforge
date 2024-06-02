@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client/default';
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient({
   errorFormat: 'pretty',
