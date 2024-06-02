@@ -6,6 +6,8 @@ import { FusesPlugin } from '@electron-forge/plugin-fuses';
 import { VitePlugin } from '@electron-forge/plugin-vite';
 import type { ForgeConfig } from '@electron-forge/shared-types';
 import { FuseV1Options, FuseVersion } from '@electron/fuses';
+import fs from 'fs';
+import path from 'path';
 
 const config: ForgeConfig = {
   packagerConfig: {
@@ -47,6 +49,24 @@ const config: ForgeConfig = {
       [FuseV1Options.OnlyLoadAppFromAsar]: true,
     }),
   ],
+  hooks: {
+    packageAfterPrune: async (_, buildPath) => {
+      const prismaFolder = path.resolve(__dirname, 'node_modules/.prisma/client');
+      if (fs.existsSync(prismaFolder)) {
+        const buildPrismaFolder = path.resolve(buildPath, 'node_modules/.prisma/client');
+        if (!fs.existsSync(buildPrismaFolder)) {
+          fs.mkdirSync(buildPrismaFolder, { recursive: true });
+        }
+
+        const files = fs.readdirSync(prismaFolder);
+        for (const file of files) {
+          fs.copyFileSync(path.resolve(prismaFolder, file), path.resolve(buildPrismaFolder, file));
+        }
+
+        console.log(`Copied Prisma folder to: ${buildPrismaFolder}`);
+      }
+    },
+  },
 };
 
 export default config;
