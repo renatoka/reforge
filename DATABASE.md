@@ -17,4 +17,3 @@ As the migration folder is bundled into our production build, we keep track of t
 ## Conclusion
 
 This is a simple and effective way to implement a SQLite database in a production environment. It is easy to use and maintain, and it is a good choice for standalone applications that need a simple and lightweight database engine. However, it has some limitations, such as the inability to run migrations in production without erasing the data in the database. But with the implementation described above, we can overcome this limitation and have a reliable and efficient database implementation for our application. For now, this is how we are going to implement SQLite in production for this boilerplate. Any changes or improvements are greatly appreciated.
-```
