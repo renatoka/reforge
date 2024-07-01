@@ -1,7 +1,7 @@
 {
   "name": "reforge",
   "productName": "reforge",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "license": "MIT",
   "description": "Reforge: a fullstack boilerplate for creating desktop applications with React and SQLite + PrismaORM. With some additionals like Vite, TypeScript, TailwindCSS, Prettier and more... 🚀",
   "main": ".vite/build/main.js",
